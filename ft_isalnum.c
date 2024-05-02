@@ -6,19 +6,21 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 02:07:37 by thine             #+#    #+#             */
-/*   Updated: 2024/04/18 02:11:12 by thine            ###   ########.fr       */
+/*   Updated: 2024/04/25 20:34:17 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
+
 int	ft_isalnum(int c)
 {
-	if ('0' <= c && '9' >= c)
+	if ('0' > c || '9' < c)
 	{
-		if ('A' <= c && 'Z' >= c)
+		if ('A' > c || 'Z' < c)
 		{
-			if ('a' <= c && 'z' >= c)
-				return (1);
+			if ('a' > c || 'z' < c)
+				return (0);
 		}
 	}
-	return (0);
+	return (1);
 }

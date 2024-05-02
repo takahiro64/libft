@@ -6,26 +6,32 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:33:04 by thine             #+#    #+#             */
-/*   Updated: 2024/04/18 09:38:19 by thine            ###   ########.fr       */
+/*   Updated: 2024/04/25 20:02:08 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	unsigned long long i;
-	unsigned long long j;
+	unsigned long long	i;
+	unsigned long long	j;
+	char				*dst;
+	char				*src;
 
 	i = 0;
-	while (haystack[i])
+	dst = (char *)haystack;
+	src = (char *)needle;
+	while (dst[i])
 	{
-		if (haystack[i] == needle[0])
+		if (dst[i] == src[0])
 		{
 			j = 0;
-			while (haystack[i + j] == needle[j])
+			while (dst[i + j] == src[j])
 			{
 				j++;
-				if (needle[j])
-					return (haystack[i]);
+				if (src[j])
+					return (&dst[i]);
 			}
 		}
 	}

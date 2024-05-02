@@ -6,15 +6,18 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 04:22:11 by thine             #+#    #+#             */
-/*   Updated: 2024/04/18 04:25:43 by thine            ###   ########.fr       */
+/*   Updated: 2024/04/25 14:56:59 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
+
 void	ft_bzero(void *s, size_t n)
 {
-	while (n > 0)
+	unsigned char *ptr = (unsigned char *) s;
+	while (n != 0)
 	{
-		s[n] = NULL;
+		*ptr++ = 0;
 		n--;
 	}
 }
