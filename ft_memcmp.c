@@ -6,7 +6,7 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:28:20 by thine             #+#    #+#             */
-/*   Updated: 2024/04/25 19:33:50 by thine            ###   ########.fr       */
+/*   Updated: 2024/05/02 10:05:20 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ int	ft_memcmp(const  void *s1, const void *s2, size_t n)
 	{
 		if (*str1 - *str2)
 			return (*str1 - *str2);
-		else if (*str1 == 0 && *str2 == 0)
-			return (0);
 		n--;
 		str1++;
 		str2++;

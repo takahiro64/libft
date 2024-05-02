@@ -6,7 +6,7 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:09:58 by thine             #+#    #+#             */
-/*   Updated: 2024/04/25 19:14:18 by thine            ###   ########.fr       */
+/*   Updated: 2024/05/02 10:43:02 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char *str;
-
-	*str = *s;
+	if (*s == (char)c)
+		return ((char*)s);
 	while (*s)
 	{
-		if (*s == c)
-			return (str);
 		s++;
+		if (*s == (char)c)
+			return ((char *)s);
 	}
-	return(0);
+	return(NULL);
 }

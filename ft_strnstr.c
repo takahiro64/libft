@@ -6,7 +6,7 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:33:04 by thine             #+#    #+#             */
-/*   Updated: 2024/04/25 20:02:08 by thine            ###   ########.fr       */
+/*   Updated: 2024/05/02 13:18:45 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,23 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	i = 0;
 	dst = (char *)haystack;
 	src = (char *)needle;
-	while (dst[i])
+	if (!*src)
+		return (dst);
+	while (dst[i] && i < len)
 	{
 		if (dst[i] == src[0])
 		{
 			j = 0;
 			while (dst[i + j] == src[j])
 			{
+				if (i + j > len)
+					return (NULL);
 				j++;
 				if (src[j])
 					return (&dst[i]);
 			}
 		}
+		i++;
 	}
-	return (0);
+	return (NULL);
 }
