@@ -23,13 +23,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dstlen = 0;
 	srclen = 0;
 	index = 0;
-	while (dst[dstlen])
-		dstlen++;
 	while (src[srclen])
 		srclen++;
-	if (dstlen >= dstsize)
+	if (dst == NULL && dstsize == 0)
+		return (srclen);
+	while (dst[dstlen] && dstlen < dstsize)
+		dstlen++;
+	if (dstlen == dstsize)
 		return (srclen + dstsize);
-	while (dstsize - dstlen - index - 1 > 0 && srclen - index > 0)
+	while (dstsize - 1 > dstlen + index && srclen > index)
 	{
 		dst[dstlen + index] = src[index];
 		index++;
@@ -39,19 +41,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 }
 
 // int main(){
-// 	char	*src = "AAAAAAA";
-// 	char	dest[30];
-// 	int		i;
-// 	for (i=0;i<30;i++){
-// 		dest[i] = 0;
-// 		if (i < 4)
-// 			dest[i] = 'B';
+// 	char *src1 = calloc(100, sizeof(char));
+// 	char *src2 = calloc(100, sizeof(char));
+// 	for (int i = 0; i < 99; i++)
+// 	{
+// 		src1[i] = i + 1;
+// 		src2[i] = i + 1;
 // 	}
-// 	printf("%zu : %s\n",ft_strlcat(dest,src,6), dest);
-// 	for (i=0;i<30;i++){
-// 		dest[i] = 0;
-// 		if (i < 4)
-// 			dest[i] = 'B';
-// 	}
-// 	printf("%zu : %s\n",strlcat(dest,src,6), dest);
+// 	printf("ft_strlcat %zu : \n",ft_strlcat(NULL,src1,0));
+// 	printf("   strlcat %zu : \n",strlcat(NULL,src2,0));
 // }
