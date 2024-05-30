@@ -6,7 +6,7 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 04:22:11 by thine             #+#    #+#             */
-/*   Updated: 2024/04/25 14:56:59 by thine            ###   ########.fr       */
+/*   Updated: 2024/05/30 15:01:51 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *ptr = (unsigned char *) s;
+	unsigned char	*ptr;
+
+	ptr = (unsigned char *) s;
 	while (n != 0)
 	{
 		*ptr++ = 0;

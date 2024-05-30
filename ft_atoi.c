@@ -6,39 +6,26 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 10:27:22 by thine             #+#    #+#             */
-/*   Updated: 2024/05/03 21:02:56 by thine            ###   ########.fr       */
+/*   Updated: 2024/05/30 14:57:59 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-static int	ft_isSpace(char c)
+static int	ft_isspace(char c)
 {
 	if (c == ' ' || (c > 8 && c < 14))
 		return (1);
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+static int	ft_countnum(char *st, int sign)
 {
-	char	*st;
-	unsigned long long int		num;
-	unsigned long long int		max_num;
-	int		sign;
+	unsigned long long int	max_num;
+	unsigned long long int	num;
 
-	st = (char *)str;
 	num = 0;
-	sign = 1;
 	max_num = 9223372036854775807;
-	while (ft_isSpace(*st))
-		st++;
-	if (*st == '+')
-		st++;
-	else if (*st == '-')
-	{
-		st++;
-		sign = -1;
-	}
 	while (*st)
 	{
 		if (*st < '0' || *st > '9')
@@ -51,6 +38,25 @@ int	ft_atoi(const char *str)
 		st++;
 	}
 	return ((int)(num * sign));
+}
+
+int	ft_atoi(const char *str)
+{
+	char	*st;
+	int		sign;
+
+	st = (char *)str;
+	sign = 1;
+	while (ft_isspace(*st))
+		st++;
+	if (*st == '+')
+		st++;
+	else if (*st == '-')
+	{
+		st++;
+		sign = -1;
+	}
+	return (ft_countnum(st, sign));
 }
 //#include<stdio.h>
 //int	main()

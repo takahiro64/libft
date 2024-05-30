@@ -6,7 +6,7 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 06:01:53 by thine             #+#    #+#             */
-/*   Updated: 2024/05/02 12:03:36 by thine            ###   ########.fr       */
+/*   Updated: 2024/05/30 15:09:35 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t dstlen;
-	size_t srclen;
-	size_t index;
-	
+	size_t	dstlen;
+	size_t	srclen;
+	size_t	index;
+
 	dstlen = 0;
 	srclen = 0;
 	index = 0;

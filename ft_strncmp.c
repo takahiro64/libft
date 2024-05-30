@@ -6,7 +6,7 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:16:13 by thine             #+#    #+#             */
-/*   Updated: 2024/04/25 19:17:31 by thine            ###   ########.fr       */
+/*   Updated: 2024/05/30 15:12:07 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t i;
-	
+	size_t	i;
+
 	i = 0;
 	while (i < n)
 	{

@@ -6,7 +6,7 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:33:04 by thine             #+#    #+#             */
-/*   Updated: 2024/05/02 13:18:45 by thine            ###   ########.fr       */
+/*   Updated: 2024/05/30 16:10:38 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,28 +17,24 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	char	*dst;
-	char	*src;
 
 	i = 0;
-	dst = (char *)haystack;
-	src = (char *)needle;
-	if (!dst && !len)
+	if (!haystack && !len)
 		return (NULL);
-	if (!*src)
-		return (dst);
-	while (dst[i] && i < len)
+	if (!*needle)
+		return ((char *)haystack);
+	while (haystack[i] && i < len)
 	{
-		if (dst[i] == src[0])
+		if (haystack[i] == needle[0])
 		{
 			j = 0;
-			while (dst[i + j] == src[j])
+			while (haystack[i + j] == needle[j])
 			{
 				j++;
 				if (i + j > len)
 					return (NULL);
-				if (!src[j])
-					return (&dst[i]);
+				if (!needle[j])
+					return ((char *)&haystack[i]);
 			}
 		}
 		i++;
@@ -46,13 +42,13 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 // int main(){
-// 	char *src1 = calloc(100, sizeof(char));
-// 	char *src2 = calloc(100, sizeof(char));
+// 	char *needle1 = calloc(100, sizeof(char));
+// 	char *needle2 = calloc(100, sizeof(char));
 // 	for (int i = 0; i < 99; i++)
 // 	{
-// 		src1[i] = i + 1;
-// 		src2[i] = i + 1;
+// 		needle1[i] = i + 1;
+// 		needle2[i] = i + 1;
 // 	}
-// 	printf("ft_strnstr : %s\n",ft_strnstr(NULL,src1,0));
-// 	printf("   strnstr : %s\n",strnstr(NULL,src2,0));
+// 	printf("ft_strnstr : %s\n",ft_strnstr(NULL,needle1,0));
+// 	printf("   strnstr : %s\n",strnstr(NULL,needle2,0));
 // }

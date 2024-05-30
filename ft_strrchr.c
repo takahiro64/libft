@@ -6,7 +6,7 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 09:12:42 by thine             #+#    #+#             */
-/*   Updated: 2024/05/02 10:41:49 by thine            ###   ########.fr       */
+/*   Updated: 2024/05/30 15:29:59 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ char	*ft_strrchr(const char *s, int c)
 		len++;
 		s++;
 	}
-	if (!(char)c) {
+	if (!(char) c)
+	{
 		return ((char *)s);
 	}
 	s--;
@@ -33,5 +34,5 @@ char	*ft_strrchr(const char *s, int c)
 		len--;
 		s--;
 	}
-	return(0);
+	return (0);
 }
