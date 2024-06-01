@@ -6,7 +6,7 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 19:38:02 by thine             #+#    #+#             */
-/*   Updated: 2024/05/30 21:10:48 by thine            ###   ########.fr       */
+/*   Updated: 2024/06/01 21:09:58 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_strjoin(char const *s1, char const *s2);
 
-static void ft_strcat(char *s1, const char *s2, size_t len)
+static void	ft_strcat(char *s1, const char *s2, size_t len)
 {
 	while (len)
 	{
@@ -24,7 +24,7 @@ static void ft_strcat(char *s1, const char *s2, size_t len)
 		s1++;
 		len--;
 	}
-	*s1=0;
+	*s1 = 0;
 }
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -35,13 +35,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
-	str = s1;
+	str = (char *)s1;
 	s1 = (char *)ft_calloc(sizeof(char), len1 + len2 + 1);
 	if (!str)
 		return (NULL);
 	ft_strcat((char *)s1, str, len1);
 	ft_strcat((char *)&s1[len1], s2, len2);
-	return (s1);
+	return ((char *)s1);
 }
 
 // int	main(void)
