@@ -6,7 +6,7 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 11:31:19 by thine             #+#    #+#             */
-/*   Updated: 2024/06/22 11:35:39 by thine            ###   ########.fr       */
+/*   Updated: 2024/06/25 15:58:39 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 		write(fd, s++, 1);
 }

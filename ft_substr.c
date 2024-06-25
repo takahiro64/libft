@@ -6,7 +6,7 @@
 /*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 18:56:40 by thine             #+#    #+#             */
-/*   Updated: 2024/05/30 19:37:32 by thine            ###   ########.fr       */
+/*   Updated: 2024/06/25 15:55:18 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 	int		size;
 
+	if (!s)
+		return (NULL);
 	if (ft_strlen(s) <= start || len == 0)
 		size = 0;
 	else if (ft_strlen(s) - start < len)
