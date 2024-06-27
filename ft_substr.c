@@ -3,16 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
+/*   By: thine <thine@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 18:56:40 by thine             #+#    #+#             */
-/*   Updated: 2024/06/25 15:55:18 by thine            ###   ########.fr       */
+/*   Updated: 2024/06/27 15:12:10 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

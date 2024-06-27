@@ -3,19 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
+/*   By: thine <thine@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 20:54:56 by thine             #+#    #+#             */
-/*   Updated: 2024/06/22 11:44:43 by thine            ###   ########.fr       */
+/*   Updated: 2024/06/27 15:11:07 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include<stdio.h>
 
-char	*ft_itoa(int n);
-
-long	count_digit(long n)
+static long	count_digit(long n)
 {
 	int	digit;
 

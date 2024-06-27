@@ -30,7 +30,6 @@ endif
 	${CC} ${CFLAGS} -c $< -o $@
 
 all: ${NAME}
-	echo $(NAME)
 
 ${NAME}: ${OBJS}
 	ar rc $(NAME) $(OBJS)

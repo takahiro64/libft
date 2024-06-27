@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thine <thine@student.42tokyo.jp>           +#+  +:+       +#+        */
+/*   By: thine <thine@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 20:23:29 by thine             #+#    #+#             */
-/*   Updated: 2024/06/01 20:52:49 by thine            ###   ########.fr       */
+/*   Updated: 2024/06/27 15:10:46 by thine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-#include<stdio.h>
 
-int	count_word(char *s, char c)
+static int	count_word(char *s, char c)
 {
 	int	res;
 	int	is_inword;
@@ -34,7 +33,7 @@ int	count_word(char *s, char c)
 	return (res);
 }
 
-int	word_len(char *s, char c)
+static int	word_len(char *s, char c)
 {
 	int	res;
 
